@@ -1,0 +1,31 @@
+// create a program that takes three inputs : a character, an integer, a floating point number in a table format
+#include <iostream>
+#include <iomanip> // For formatting
+
+using namespace std;
+
+int main() {
+    char ch;
+    int num;
+    float fnum;
+
+    // Taking input
+    cout << "Enter a character: ";
+    cin >> ch;
+    cout << "Enter an integer: ";
+    cin >> num;
+    cout << "Enter a floating-point number: ";
+    cin >> fnum;
+
+    // Displaying output in table format
+    cout << "\n-----------------------------\n";
+    cout << "| Character | Integer | Float  |\n";
+    cout << "-----------------------------\n";
+    cout << "| " << setw(9) << ch << " | " 
+         << setw(7) << num << " | " 
+         << setw(6) << fixed << setprecision(2) << fnum << " |\n";
+    cout << "-----------------------------\n";
+
+    return 0;
+}
+
