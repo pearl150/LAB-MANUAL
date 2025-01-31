@@ -1,0 +1,21 @@
+// create a program that reads users name and age then outputs " hello(name)you are(age) years old
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string name;
+    int age;
+
+    // Prompt the user for their name
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name);
+
+    // Prompt the user for their age
+    std::cout << "Enter your age: ";
+    std::cin >> age;
+
+    // Output the greeting message
+    std::cout << "Hello " << name << ", you are " << age << " years old." << std::endl;
+
+    return 0;
+}
