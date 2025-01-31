@@ -1,0 +1,26 @@
+// write  a program to swap 2 nos using a temporary and then without using a  temporary variable
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a, b;
+
+    // Input two numbers
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    // Swapping using a temporary variable
+    int temp = a;
+    a = b;
+    b = temp;
+    cout << "After swapping (using temp): a = " << a << ", b = " << b << endl;
+
+    // Swapping without using a temporary variable
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    cout << "After swapping (without temp): a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
