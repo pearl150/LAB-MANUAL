@@ -1,0 +1,18 @@
+//  write a program that solves a quadratic equation(ax^2 bx+c=0) using conditional elements to handle all possible cases 
+*int a,b,c;
+    float d;
+    cout<<"Enter a,b,c\n";
+    cin>>a>>b>>c;
+    d=(float)(pow(b,2)-4*a*c);
+    if(d>0){
+    cout<<d<<endl;
+    cout<<"Roots are real and unequal"<<endl;
+    }
+    else if(d==0){
+    cout<<d<<endl;
+    cout<<"Roots are real and equal"<<endl;
+    }
+    else{
+    cout<<d<<endl;
+    cout<<"Roots are imaginery"<<endl;
+    }*/rite a program that solves a quadratic equation(ax^2 bx+c=0) using conditional elements to handle all possible cases
