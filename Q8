@@ -1,0 +1,26 @@
+//write a program that takes users full name and age as input and display a greeting with the name and the number of days they have lived
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string fullName;
+    int age, daysLived;
+
+    // Taking input
+    cout << "Enter your full name: ";
+    getline(cin, fullName);
+    
+    cout << "Enter your age: ";
+    cin >> age;
+
+    // Calculating days lived (approximate, ignoring leap years)
+    daysLived = age * 365;
+
+    // Displaying output
+    cout << "Hello, " << fullName << "! You have lived approximately " 
+         << daysLived << " days." << endl;
+
+    return 0;
+}
