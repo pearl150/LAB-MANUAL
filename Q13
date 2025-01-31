@@ -1,0 +1,43 @@
+// create a program to simulates an ATM machine using a switch statement. include options for withdrawl, deposit, balance inquiry and exit with error handling for invalid and insufficient balance
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double balance = 1000.0, amount;
+    int choice;
+
+    while (true) {
+        // ATM Menu
+        cout << "\nATM Menu:\n";
+        cout << "1. Withdraw\n2. Deposit\n3. Balance Inquiry\n4. Exit\n";
+        cout << "Choose an option: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: // Withdrawal
+                cout << "Enter withdrawal amount: ";
+                cin >> amount;
+                if (amount > balance)
+                    cout << "Error: Insufficient balance!\n";
+                else if (amount <= 0)
+                    cout << "Error: Invalid amount!\n";
+                else {
+                    balance -= amount;
+                    cout << "Withdrawal successful. New balance: " << balance << endl;
+                }
+                break;
+
+            case 2: // Deposit
+                cout << "Enter deposit amount: ";
+                cin >> amount;
+                if (amount <= 0)
+                    cout << "Error: Invalid deposit amount!\n";
+                else {
+                    balance += amount;
+                    cout << "Deposit successful. New balance: " << balance << endl;
+                }
+                break;
+
+            case 3: // Balance Inquiry
+                cout << "Current balance: " << balance <<
