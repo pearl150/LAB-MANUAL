@@ -1,0 +1,21 @@
+// write a program to evaluate (a^b + c&d) where a,b,c and d are user inputs. explain precedense of bitwise operator in program
+#include <iostream>
+#include <cmath> // For pow()
+
+using namespace std;
+
+int main() {
+    int a, b, c, d, result;
+
+    // Taking input
+    cout << "Enter values for a, b, c, and d: ";
+    cin >> a >> b >> c >> d;
+
+    // Evaluating the expression (a^b + c&d)
+    result = pow(a, b) + (c & d);
+
+    // Display result
+    cout << "Result: " << result << endl;
+
+    return 0;
+}
