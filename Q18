@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int circularLeftShift(int num, int shift, int bits = 8) {
+    return ((num << shift) | (num >> (bits - shift))) & ((1 << bits) - 1);
+}
+
+int circularRightShift(int num, int shift, int bits = 8) {
+    return ((num >> shift) | (num << (bits - shift))) & ((1 << bits) - 1);
+}
+
+int main() {
+    int num, shift;
+    cout << "Enter number and shift value: ";
+    cin >> num >> shift;
+
+    cout << "Left Shift: " << circularLeftShift(num, shift) << endl;
+    cout << "Right Shift: " << circularRightShift(num, shift) << endl;
+
+    return 0;
+}
