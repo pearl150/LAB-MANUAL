@@ -1,0 +1,4 @@
+// Write a function int max number
+int maxNumber(int a, int b) {
+    return (a > b) ? a : b;
+}
