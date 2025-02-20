@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>  // For formatting output
+using namespace std;
+
+int main() {
+    int rows, cols;
+    cout << "Enter rows and columns: ";
+    cin >> rows >> cols;
+
+    int arr[rows][cols];
+
+    cout << "Enter " << rows * cols << " elements:\n";
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            cin >> arr[i][j];
+
+    cout << "Formatted 2D Array:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++)
+            cout << setw(5) << arr[i][j] << " ";  // setw(5) aligns columns
+        cout << endl;
+    }
+
+    return 0;
+}
