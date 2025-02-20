@@ -1,0 +1,4 @@
+//Check if Number is Palindrome
+bool isPalindrome(int n) {
+    return n == reverseNumber(n);
+}
