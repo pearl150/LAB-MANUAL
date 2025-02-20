@@ -1,0 +1,36 @@
+#include <iostream>
+#include <limits>
+using namespace std;
+
+int main() {
+    int num, sum = 0, count = 0, maxNum = INT_MIN, minNum = INT_MAX;
+    string input;
+
+    cout << "Enter numbers (type 'exit' to stop):\n";
+
+    while (true) {
+        cin >> input;
+        if (input == "exit") break;
+
+        try {
+            num = stoi(input);
+            sum += num;
+            count++;
+            if (num > maxNum) maxNum = num;
+            if (num < minNum) minNum = num;
+        } catch (...) {
+            cout << "Invalid input! Enter a valid integer or 'exit'.\n";
+        }
+    }
+
+    if (count > 0) {
+        cout << "\nSum: " << sum 
+             << "\nCount: " << count 
+             << "\nMax: " << maxNum 
+             << "\nMin: " << minNum << endl;
+    } else {
+        cout << "No valid numbers entered.\n";
+    }
+
+    return 0;
+}
