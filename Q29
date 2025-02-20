@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 51; // Start from 51 since we need a number greater than 50
+    while (num % 7 != 0) {
+        num++;
+    }
+    cout << "First number greater than 50 divisible by 7 is: " << num << endl;
+    return 0;
+}
