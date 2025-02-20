@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+bool isArmstrong(int num) {
+    int sum = 0, temp = num, digits = 0;
+    
+    while (temp > 0) {  
+        temp /= 10;
+        digits++;
+    }
+
+    temp = num;
+    while (temp > 0) {
+        int digit = temp % 10;
+        sum += pow(digit, digits);
+        temp /= 10;
+    }
+
+    return sum == num;
+}
+
+int main() {
+    int start, end;
+    cout << "Enter range (start and end): ";
+    cin >> start >> end;
+
+    cout << "Armstrong numbers in range: ";
+    for (int i = start; i <= end; i++) {
+        if (isArmstrong(i)) cout << i << " ";
+    }
+
+    return 0;
+}
