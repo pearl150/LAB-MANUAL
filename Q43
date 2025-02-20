@@ -1,0 +1,25 @@
+// overloaded print() function:
+#include <iostream>
+using namespace std;
+
+// Overloaded print function
+void print(string str) {
+    cout << "String: " << str << endl;
+}
+
+void print(int num) {
+    cout << "Integer: " << num << endl;
+}
+
+void print(string str, int num) {
+    cout << "String: " << str << ", Integer: " << num << endl;
+}
+
+int main() {
+    // Calling different versions of print function
+    print("Hello");
+    print(42);
+    print("Age", 25);
+
+    return 0;
+}
