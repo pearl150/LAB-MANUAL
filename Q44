@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Calculator {
+public:
+    // Overloaded sum function for two integers
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded sum function for three doubles
+    double sum(double a, double b, double c) {
+        return a + b + c;
+    }
+
+    // Overloaded sum function for one integer and one float
+    float sum(int a, float b) {
+        return a + b;
+    }
+};
+
+int main() {
+    Calculator calc;
+
+    // Testing overloaded sum functions
+    cout << "Sum of two integers: " << calc.sum(5, 10) << endl;
+    cout << "Sum of three doubles: " << calc.sum(1.5, 2.5, 3.5) << endl;
+    cout << "Sum of one int and one float: " << calc.sum(4, 5.7f) << endl;
+
+    return 0;
+}
