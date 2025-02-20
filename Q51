@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstdarg>
+using namespace std;
+
+int findLargest(int count, ...) {
+    va_list args;
+    va_start(args, count);
+    int maxVal = va_arg(args, int);
+    for (int i = 1; i < count; i++)
+        maxVal = max(maxVal, va_arg(args, int));
+    va_end(args);
+    return maxVal;
+}
+
+int main() {
+    cout << "Largest: " << findLargest(4, 3, 7, 1, 9) << endl;
+    return 0;
+}
