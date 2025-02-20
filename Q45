@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Calculator {
+public:
+    // Overloaded multiply function for two integers
+    int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // Overloaded multiply function for one int and one double
+    double multiply(int a, double b) {
+        return a * b;
+    }
+
+    // Overloaded multiply function for three float values
+    float multiply(float a, float b, float c) {
+        return a * b * c;
+    }
+};
+
+int main() {
+    Calculator calc;
+
+    // Testing overloaded multiply functions
+    cout << "Multiplication of two integers: " << calc.multiply(5, 10) << endl;
+    cout << "Multiplication of one int and one double: " << calc.multiply(4, 2.5) << endl;
+    cout << "Multiplication of three floats: " << calc.multiply(1.2f, 2.3f, 3.4f) << endl;
+
+    return 0;
+}
