@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Two strings
+string concat(string a, string b) {
+    return a + b;
+}
+
+// One int and one string
+string concat(int number, string text) {
+    return to_string(number) + text;
+}
+
+int main() {
+    cout << "Concat strings: " << concat("Hello, ", "World!") << endl;
+    cout << "Concat int and string: " << concat(2025, "Vision") << endl;
+    return 0;
+}
