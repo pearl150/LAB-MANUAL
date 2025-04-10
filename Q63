@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+// Version 1: Two int values
+int multiply(int a, int b) {
+    return a * b;
+}
+
+// Version 2: One int and one double
+double multiply(int a, double b) {
+    return a * b;
+}
+
+// Version 3: Three float values
+float multiply(float a, float b, float c) {
+    return a * b * c;
+}
+
+int main() {
+    cout << "multiply(int, int): " << multiply(3, 4) << endl;
+    cout << "multiply(int, double): " << multiply(3, 2.5) << endl;
+    cout << "multiply(float, float, float): " << multiply(1.2f, 2.3f, 3.4f) << endl;
+    return 0;
+}
