@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class Calculator {
+public:
+    // Sum of two integers
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    // Sum of three doubles
+    double sum(double a, double b, double c) {
+        return a + b + c;
+    }
+
+    // Sum of one integer and one float
+    float sum(int a, float b) {
+        return a + b;
+    }
+};
+
+int main() {
+    Calculator calc;
+    cout << "Sum (int, int): " << calc.sum(3, 4) << endl;
+    cout << "Sum (double, double, double): " << calc.sum(1.1, 2.2, 3.3) << endl;
+    cout << "Sum (int, float): " << calc.sum(5, 4.5f) << endl;
+    return 0;
+}
