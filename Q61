@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+// Overload 1: Takes a string
+void print(string s) {
+    cout << "String: " << s << endl;
+}
+
+// Overload 2: Takes an integer
+void print(int n) {
+    cout << "Integer: " << n << endl;
+}
+
+// Overload 3: Takes both a string and an integer
+void print(string s, int n) {
+    cout << "String: " << s << ", Integer: " << n << endl;
+}
+
+int main() {
+    print("Hello");
