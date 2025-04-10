@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Area of a square
+int area(int side) {
+    return side * side;
+}
+
+// Area of a rectangle
+int area(int length, int width) {
+    return length * width;
+}
+
+// Area of a circle
+double area(double radius) {
+    return M_PI * radius * radius;
+}
+
+int main() {
+    cout << "Area of square (4): " << area(4) << endl;
+    cout << "Area of rectangle (4, 5): " << area(4, 5) << endl;
+    cout << "Area of circle (3.0): " << area(3.0) << endl;
+    return 0;
+}
