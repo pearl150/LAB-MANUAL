@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdarg>
+using namespace std;
+
+void concatStrings(int count, ...) {
+    va_list args;
+    va_start(args, count);
+
+    string result = "";
+    for (int i = 0; i < count; ++i) {
+        result += va_arg(args, const char*);
+    }
+
+    va_end(args);
+    cout << "Concatenated string: " << result << endl;
+}
+
+int main() {
+    concatStrings(3, "Hello, ", "C++ ", "World!");
+    concatStrings(2, "Chat", "GPT");
+    return 0;
+}
