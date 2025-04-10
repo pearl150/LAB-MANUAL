@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+// No parameters
+void greet() {
+    cout << "Hello!" << endl;
+}
+
+// One string parameter
+void greet(string name) {
+    cout << "Hello, " << name << "!" << endl;
+}
+
+// String and int parameters
+void greet(string name, int age) {
+    cout << "Hello, " << name << "! You are " << age << " years old." << endl;
+}
+
+int main() {
+    greet();
+    greet("Alice");
+    greet("Bob", 30);
+    return 0;
+}
